@@ -104,5 +104,3 @@
         <p id="love-message"></p>
     </div>
 </div>
-
-<audio id="love-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio> <!-- replace wit
