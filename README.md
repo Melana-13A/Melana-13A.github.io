@@ -4,27 +4,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        body {font-family: 'Arial', sans-serif;
             background-color: #ffebee;
             text-align: center;
             padding: 20px;
-            transition: background-color 0.5s;
-        }
+            transition: background-color 0.5s;}
         
-        h1 {
-            color: #d81b60;
-            margin-bottom: 30px;
-        }
+        h1 {color: #d81b60;
+            margin-bottom: 30px;}
         
-        .container {
-            max-width: 600px;
+        .container {max-width: 600px;
             margin: 0 auto;
             background-color: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
         
         .buttons {
             margin-top: 20px;
