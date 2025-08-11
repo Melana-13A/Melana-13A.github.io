@@ -2,87 +2,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
+    <title>Will You Join My Cosmic Journey?</title>
     <style>
-        body {font-family: 'Arial', sans-serif;
-            background-color: #ffebee;
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background: radial-gradient(circle at center, #0d1b2a, #000000);
+            color: #e0eaff;
             text-align: center;
             padding: 20px;
-            transition: background-color 0.5s;}
-        
-        h1 {color: #d81b60;
-            margin-bottom: 30px;}
-        
-        .container {max-width: 600px;
+            overflow: hidden;
+            transition: background 1s;
+        }
+
+        h1 {
+            color: #89c2d9;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #89c2d9;
+        }
+
+        .container {
+            max-width: 600px;
             margin: 0 auto;
-            background-color: white;
+            background: rgba(13, 27, 42, 0.8);
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
-        
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(173, 216, 230, 0.3);
+            position: relative;
+        }
+
         .buttons {
             margin-top: 20px;
         }
-        
+
         button {
-            padding: 10px 20px;
+            padding: 12px 24px;
             margin: 0 10px;
             font-size: 16px;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         #yes {
-            background-color: #4caf50;
+            background-color: #4cafef;
             color: white;
+            box-shadow: 0 0 10px #4cafef;
         }
-        
+
+        #yes:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #4cafef;
+        }
+
         #no {
             background-color: #f44336;
             color: white;
+            position: relative;
         }
-        
+
         .hidden {
             display: none;
         }
-        
+
         #response {
             margin-top: 20px;
             font-size: 24px;
-            color: #d81b60;
             font-weight: bold;
+            color: #ffd700;
+            text-shadow: 0 0 15px #ffd700;
         }
-        
-        .heart {
-            font-size: 100px;
-            color: red;
-            animation: beat 1s infinite alternate;
+
+        .planet {
+            font-size: 80px;
+            animation: spin 8s linear infinite;
         }
-        
-        @keyframes beat {
-            to {
-                transform: scale(1.2);
-            }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Will You Be My Valentine?</h1>
+        <h1>Will You Join My Cosmic Journey?</h1>
         
         <div id="question">
-            <p>I really like you! Would you be my Valentine?</p>
+            <p>Let’s travel the stars together 🌌</p>
             <div class="buttons">
-                <button id="yes">Yes!</button>
-                <button id="no">No</button>
+                <button id="yes">Yes! 🚀</button>
+                <button id="no">No 👽</button>
             </div>
         </div>
         
         <div id="response" class="hidden">
-            <div class="heart">❤️</div>
-            <p>Yay! You made me the happiest person! ❤️</p>
+            <div class="planet">🪐</div>
+            <p>Yay! Let’s explore the galaxy together! 🌠</p>
         </div>
     </div>
 
@@ -90,15 +105,14 @@
         document.getElementById('yes').addEventListener('click', function() {
             document.getElementById('question').classList.add('hidden');
             document.getElementById('response').classList.remove('hidden');
-            document.body.style.backgroundColor = "#fce4ec";
+            document.body.style.background = "radial-gradient(circle at center, #1b263b, #000)";
         });
-        
+
         document.getElementById('no').addEventListener('mouseover', function() {
             const button = this;
             const container = document.querySelector('.container');
             const containerRect = container.getBoundingClientRect();
             
-            // Random position within container
             const maxX = containerRect.width - button.offsetWidth;
             const maxY = containerRect.height - button.offsetHeight;
             
